@@ -1,0 +1,20 @@
+.hed{
+    background: linear-gradient(to right,#10845d, blue);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cards{
+    background-color: #f1f2f3;
+    align-items: center;
+    width: min-content;
+    border-radius: 25px; 
+       overflow: hidden;
+       border: 0;
+       box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06),
+                   0 2px 4px  rgba(43, 163, 193, 0.95);
+       transition: all 0.15s ease,
+    
+
+}
+

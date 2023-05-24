@@ -1,0 +1,50 @@
+.containerabout{
+    margin-top: 11%;
+}
+
+.content{
+    padding-top: 4%;
+    
+    
+}
+
+.service{
+    color:  #1abc9c;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.subtext{
+    text-align: center;
+}
+.testimoni{
+    margin-top: 8%;
+
+}
+.head{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.colors{
+    color: #283779;
+}
+.contents{
+    color:#1b71a1;
+    padding-top: 3%;
+}
+#carouselPeople .carousel-indicators button {
+    background-color: #283779; 
+    border-radius: 10px;
+    width: 21px;
+    height: 12px;
+  }
+
+.clr{
+    color:  #1b71a1
+}
+.foot{
+    background-color: #1b71a1;
+}
+.bgclr{
+    background-color: #283779;
+}

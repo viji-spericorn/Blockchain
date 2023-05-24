@@ -1,0 +1,52 @@
+{
+  "development": {
+    "database": {
+      "username": "postgres",
+      "password": "postgres",
+      "database": "patientManagement",
+      "dialect": "postgres",
+      "port": 5432,
+      "logging": false
+    },
+    "jwts": {
+      "JWT_SECRET_KEY": "adminadmin@123"
+    },
+    "mail": {
+      "host": "smtp.gmail.com",
+      "service": "gmail",
+      "email": "viji@spericorn.com",
+      "pass": "vk282000"
+    },
+    "aes": {
+      "AES_SECRET_KEY": "adminadmin@123"
+    },
+    "CORN": {
+      "CORN": "true"
+    }
+  },
+  "local": {
+    "database": {
+      "username": "postgres",
+      "password": "postgres",
+      "database": "patientManagement",
+      "dialect": "postgres",
+      "port": 5432,
+      "logging": false
+    },
+    "jwts": {
+      "JWT_SECRET_KEY": "adminadmin@123"
+    },
+    "mail": {
+      "host": "smtp.gmail.com",
+      "service": "gmail",
+      "email": "viji@spericorn.com",
+      "pass": "vk282000"
+    },
+    "aes": {
+      "AES_SECRET_KEY": "adminadmin@123"
+    },
+    "CORN": {
+      "CORN": "true"
+    }
+  }
+}
