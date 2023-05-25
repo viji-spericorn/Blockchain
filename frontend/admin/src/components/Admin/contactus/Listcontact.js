@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../../Dashboard/Navbar';
-import Sidebar from '../../Dashboard/Sidebar';
+import Sidebar from '../Sidebar';
 import List from './DataTable';
 
 const Listcontact = () => {

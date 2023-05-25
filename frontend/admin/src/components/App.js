@@ -111,7 +111,7 @@ const App = () => {
           path="/consultations"
           element={
             <PrivateRoute>
-              <Lists />
+              <List />
             </PrivateRoute>
           }
         ></Route>
@@ -159,7 +159,7 @@ const App = () => {
           path="/patientdetails"
           element={
             <PrivateRoute>
-              <List />
+              <Lists />
             </PrivateRoute>
           }
         ></Route>

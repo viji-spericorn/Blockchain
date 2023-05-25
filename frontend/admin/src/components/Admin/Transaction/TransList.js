@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import DataTable, { createTheme } from 'react-data-table-component';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -32,6 +32,8 @@ createTheme(
 
 function List() {
   const dispatch = useDispatch();
+  const [filteredTransaction, setFilteredTransaction] = useState([]);
+
   useEffect(() => {
     dispatch(listtransaction());
   }, []);
@@ -52,7 +54,7 @@ function List() {
     },
     {
       name: 'Status',
-      selector: (row) => row.status.toString(),
+      selector: (row) => row.status,
       center: true,
     },
     {
@@ -60,27 +62,50 @@ function List() {
       selector: (row) => row.transactionHash,
       center: true,
     },
-    // {
-    //   name: 'Action',
-    //   style: {
-    //     fontSize: '18px', // Sets font size to 18px
-    //   },
-    //   selector: (row) => (
-    //     <Link to={`/enquiry/${row.id}`} type="button" className="btn btn-info">
-    //       View
-    //     </Link>
-    //   ),
-    // },
   ];
 
+  const handleFilter = (e) => {
+    const value = e.target.value;
+    if (value === 'all') {
+      setFilteredTransaction(transaction);
+    } else {
+      const filtered = transaction.filter(
+        (item) => item.appointmentType.toLowerCase() === value.toLowerCase()
+      );
+      setFilteredTransaction(filtered);
+    }
+  };
+
   return (
-    <div className="table-container headd">
-      <DataTable
-        columns={columns}
-        pagination
-        data={transaction}
-        theme="solarized"
-      />
+    <div>
+      <div className="filter-container " style={{ margin: '3rem' }}>
+        <label htmlFor="appointmentFilter" className="h4">
+          Filter by Appointment Type:
+        </label>
+        <select
+          id="appointmentFilter"
+          onChange={handleFilter}
+          className="border-black-3"
+        >
+          <option value="all">All</option>
+          <option value="consultation">consultation</option>
+          <option value="vaccination">vaccination</option>
+          <option value="vaccinationCertificate">vaccinationCertificate</option>
+          <option value="consultationCertificate">
+            consultationCertificate
+          </option>
+        </select>
+      </div>
+      <div className="table-container" style={{ margin: '3rem' }}>
+        <DataTable
+          columns={columns}
+          pagination
+          data={
+            filteredTransaction.length > 0 ? filteredTransaction : transaction
+          }
+          theme="solarized"
+        />
+      </div>
     </div>
   );
 }

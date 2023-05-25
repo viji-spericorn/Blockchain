@@ -1,0 +1,41 @@
+.outer-border {
+    width: 800px;
+    height: 650px;
+    padding: 20px;
+    text-align: center;
+    border: 10px solid #2e6565;
+    margin-left: 21%;
+  }
+  
+  .inner-dotted-border {
+    width: 750px;
+    height: 600px;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #42d2a7;
+    border-style: dotted;
+  }
+  
+  .certification {
+    font-size: 50px;
+    font-weight: bold;
+    color: #453269;
+  }
+  
+  .certify {
+    font-size: 25px;
+  }
+  
+  .name {
+    font-size: 30px;
+    color: green;
+  }
+  
+  .fs-30 {
+    font-size: 30px;
+  }
+  
+  .fs-20 {
+    font-size: 20px;
+  }
+  

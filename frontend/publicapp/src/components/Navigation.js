@@ -43,6 +43,9 @@ const Navigation = () => {
               <Nav.Link href="/">Doctors</Nav.Link>
               <Nav.Link href="/">Services</Nav.Link>
               <Nav.Link href="/">Contact</Nav.Link>
+              <Nav.Link href="/verifiyCertificates">
+                verifiyCertificates
+              </Nav.Link>
             </Nav>
             <a
               className="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4"

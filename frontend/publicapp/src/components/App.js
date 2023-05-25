@@ -6,6 +6,7 @@ import HomePage from './HomePage';
 import '../css/common.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetErrorMessage, resetSuccessMessage } from '../actions';
+import Verify from './VerificationSection';
 
 // toaster
 const toastConfig = {
@@ -40,6 +41,7 @@ const App = () => {
       <ToastContainer />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
+        <Route path="/verifiyCertificates" element={<Verify />}></Route>
       </Routes>
     </div>
   );

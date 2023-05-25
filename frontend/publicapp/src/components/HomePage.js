@@ -10,14 +10,12 @@ import PeopleWhoLoveUs from './PeopleWhoLoveUs';
 import Testimonials from './Testimonials';
 import Appointment from './Appointment';
 import Footer from './Footer';
-import Verify from './VerificationSection';
 
 const HomePage = () => {
   return (
     <div>
       <Navigation />
-      <HeroSection />
-      <Verify />
+      <HeroSection />s
       <DepartmentsSection />
       <EyeCareSection />
       <AboutSection />

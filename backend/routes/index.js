@@ -13,6 +13,6 @@ router.use('/', require('../api/consultation/index'));
 router.use('/', require('../api/vaccine/index'));
 router.use('/', require('../api/VaccinationManagement/index'));
 router.use('/', require('../api/transaction/index'));
-router.use('/patientdetails', require('../api/UserMnagement/index'));
+router.use('/', require('../api/UserMnagement/index'));
 
 module.exports = router;

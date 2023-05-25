@@ -15,7 +15,7 @@ const ViewPage = () => {
           display: 'flex',
           flexFlow: 'column',
           height: '100vh',
-          overflowY: 'hidden',
+          overflowY: 'scroll',
         }}
       >
         <Navbar />

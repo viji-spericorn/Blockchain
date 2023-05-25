@@ -5,7 +5,7 @@ const consultationCertificateVerificationFunction = async ({
   certificateNumber,
 }) => {
   console.log(certificateNumber, web3);
-  const tokenAddress = '0x535Ac607e72146218Bc5e7d3b71a37944a77025C';
+  const tokenAddress = '0xb85987bd100b2b211ad81a785e6a76592fc29b60';
 
   try {
     const smartContract = await new web3.eth.Contract(

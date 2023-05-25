@@ -114,8 +114,6 @@ const wrappedTokenDeposit = async ({
     issuedDateTime
   );
 
-  
-
   const result = await initiateContractTransaction({
     web3,
     contractFunction: createCertificationFunction,
@@ -157,13 +155,13 @@ const wrappedTokenDeposit = async ({
           patientUUID: web3.utils.hexToUtf8(eventReturn.patientUUID),
           patientRegId: eventReturn.patientRegId,
           doctorName: web3.utils.hexToUtf8(eventReturn.doctorName),
-          consultationTime: new Date(),
+          consultationTime: eventReturn.consultationTime,
           departmentName: web3.utils.hexToUtf8(eventReturn.departmentName),
           hospitalName:
             web3.utils.hexToUtf8(eventReturn.hospitalName) + 'Hospitals',
           issuerName: web3.utils.hexToUtf8(eventReturn.issuerName),
           issuerId: web3.utils.hexToUtf8(eventReturn.issuerId),
-          issuedDateTime: new Date(),
+          issuedDateTime: eventReturn.issuedDateTime,
         };
         resolve(returnedCertificates);
       });
